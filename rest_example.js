@@ -3,11 +3,10 @@ Rest properties collect the remaining field names that are not already picked of
 Those keys and their values are copied onto a new object.
 */
 console.clear();
-
-let spread_example_II = (function(){
-	console.log("**************** Spread Example II ****************");
-	let x = {prop1:true, prop2:false};
-	let y = {prop3:1, prop4:2}
-	let n = {...x, ...y}
-	console.log("n: "+JSON.stringify(n))
+let rest_example = (function(){
+	console.log("**************** Rest Example ****************");
+	let { x, y, ...z } = { x: 1, y: 2, a: 3, b: 4 };
+	console.log("x: "+x)
+	console.log("y: "+y)
+	console.log("z: "+JSON.stringify(z))
 })();
