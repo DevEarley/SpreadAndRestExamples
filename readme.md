@@ -17,11 +17,11 @@ Cool, I can tell what this is doing. The code above will result in a Shallow Cop
 	}
 	let someChild = {children:[{id:1},{id:2}]}
 	let someObject = {prop1:true,prop2:false,child:someChild};
-	let deepCopy = deepCopy(someObject); 	
+	let newObject = deepCopy(someObject); 	
 	someChild.children[0].id = 3;
-	console.log("someObject === deepCopy: "+(someObject === deepCopy));
-	console.log("Child Affected: "+(deepCopy.child.children[0].id === 3));
-	//"someObject === deepCopy: false"
+	console.log("someObject === newObject: "+(someObject === newObject));
+	console.log("Child Affected: "+(newObject.child.children[0].id === 3));
+	//"someObject === newObject: false"
 	//"Child Affected: false"
 	
 
